@@ -62,6 +62,7 @@ header .logo svg{
 	display:block;
 	position:relative;
 	width:100%;
+	min-width:560px;
 	height:auto;
 	margin:auto;
 	box-sizing:border-box;
@@ -301,8 +302,9 @@ body{
   	transform:rotate(32deg);
 }
 
-
 .asteroids.position-5.move{
     right: -150px;
     top: 250px;
 }
+
+@

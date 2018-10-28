@@ -2,41 +2,109 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Solar System Orchestra</title>
+	<title>Solar System Orchestra - Nasa SpaceApps Challenge 2018</title>
     <meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" type="text/css" href="assets/styles/app.css" />
+
+	<meta property='og:title' content='Solar System Orchestra - Nasa SpaceApps Challenge 2018'>
+	<meta property='og:description' content='What if the solar system would be a kind of sequencer and each planet an instrument? We worked on a proposition to listen to an interpretation of this symphony.' />
+	<meta property='og:image' content='http://nasa2018.applications.ws/assets/images/share.png' />
+
+
 </head>
-<body>
-	<header>
-		<div class="logo"><img src="assets/images/logo.svg" /></div>
-	</header>
+<body class="loading">
+	<!-- Intro : Description of the project -->
+	<div class="intro">
+		<div class="container">
+			<header>
+				<div class="logo"><img src="assets/images/logo.gif" alt="Solar System Orchestra" /></div>
+				<div class="team">
+					<p>The Team: </p>
+					<p><span>Stefania Bertella</span> <span>Doctoral Student in Chemical Engineering</span></p>
+					<p><span>Philippe Cuendet</span> <span>Graphic Designer / Creative Director</span></p>
+					<p><span>Admir Demir</span> <span>Professor of Computer Science</span></p>
+					<p><span>Yann Heurtaux</span> <span>Speaker / Communitarian / Hacktivist</span></p>
+					<p><span>Patrick Matter</span> <span>Musician / Developer</span></p>
+					<p><span>Raphaël Schmutz</span> <span>Media Engineer</span></p>
+					<p><span>Mustafa Anil Tuncel</span> <span>Software Engineer</span></p>
+					<p><span>David Viale</span> <span>Innovation Specialist</span></p>
+				</div>
+			</header>
+			
+			<h1>welcome to the solar system orchestra</h1>
+			<section class="presentation">
 
-	<div id="app" class="app"></div>
+				<article>
+					<p>What if the solar system would be a kind of sequencer and each planet an instrument?</p> 
+					<p>We worked on a proposition to listen to an interpretation of this symphony.</p>
+					<p>To achieve this goal, we created a signature sound for each planet and defined a system by using static and dynamic data from Nasa. Here is our process:</p>
+					<p>- Colors to keys (Static). <br />
+					Determine the 3 dominant colors for each planet, 3 colors = 3 keys = a chord (based on a wavelength conversion from nm to Hz, it defines a key, then each result is confronted with Charles Blanc-Gatti theory from the artistic movement called the Musicalism).</p>
+					<p>- Dimension of the planet defines the octave from which the keys are played (Static).</p>
+					<p>- Rotation speed variation of each planet affects a fine tuning on each key (Static).</p>
+				</article>
 
-	<div id="background" class="background">
-		<div id="sun" class="sun"></div>
+				<article>
+					<p>- Orbital speed of each planet around the sun is connected to the low pass filter (Dynamic).</p>
+					<p>- Distance from each planet to earth defines the volume’s variations and the panning (Dynamic).</p>
+					<p>- Asteroids sounds are defined by their distance from earth and magnitude and their total number per day appears randomly.</p>
+					<p>As scale, 6 minutes here represents the full orbit of Neptune around the sun that takes approximately 165 year in earth time.</p>
+					<p>The result is a powerful and spiritual music which reminds to the overtone singing and the repetitive music and experimental sound of artists such as Terry Riley or the master of the phasing music: Steve Reich.</p>
+				</article>
+
+				<div class="cta">
+					<div class="button" id="start">Music</div>
+					<p class="copyright">Inc.K © Oct. 2018</p>
+				</div>
+
+			</section>
+
+			<section class="partners">
+				<div class="partner inck">
+					<img src="assets/images/inck.svg" alt="Inc.K" />
+				</div>
+				<div class="partner nasa">
+					<img src="assets/images/nasa.svg" alt="Nasa" />
+				</div>
+				<div class="partner spaceapp">
+					<img src="assets/images/spaceAppChallenge.svg" alt="SpaceApps Challenge" />
+				</div>
+				<div class="partner impacthub">
+					<img src="assets/images/impactHubLausanne.svg" alt="ImpactHub Lausanne" />
+				</div>
+			</section>
+		</div>
 	</div>
 
-	<!-- Vendors -->
+	<!-- Tool : Demonstrator for the orchestra -->
+	<div class="tool">
+		<header><div class="logo"><img src="assets/images/logo.svg" alt="Solar System Orchestra"/></div></header>
+		<div id="app" class="app"></div>
+	</div>
 
+	<!-- Background : Stars and sun -->
+	<div id="sun" class="sun"></div>
+	<div id="background" class="background"></div>
+
+	<!-- Vendors -->
 	<script type="text/javascript" src="vendors/axios.min.js"></script>
 	<script type="text/javascript" src="vendors/Tone.js"></script>
+	<script type="text/javascript" src="vendors/StartAudioContext.js"></script>
 	<script type="text/javascript" src="vendors/particles.min.js"></script>
 
 	<!-- Components -->
-
 	<script type="text/javascript" src="assets/scripts/components/Sun.js"></script>
+	<script type="text/javascript" src="assets/scripts/components/Earth.js"></script>
 	<script type="text/javascript" src="assets/scripts/components/Planet.js"></script>
 	<script type="text/javascript" src="assets/scripts/components/Asteroids.js"></script>
 
 	<!-- App -->
 	<script type="text/javascript" src="assets/scripts/App.js"></script>
 	<script type="text/javascript">
+
+		// Start the solar system orchestra
 		App.start();
-		new Sun();
-		particlesJS.load('background', 'data/particles.json', function() {
-			console.log('callback - particles.js config loaded');
-		});
+
 	</script>
 </body>
 </html>

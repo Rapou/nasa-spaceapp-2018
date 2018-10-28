@@ -10,12 +10,11 @@ function Sun(){
 		element.style.width = width + "px";
 		element.style.height = width + "px";
 
-			marginTop += 0.5;
-			marginLeft += 1.5;
+		marginTop += 0.5;
+		marginLeft += 1.5;
 
-			element.style.top = (80 - marginTop) + "px";
-			element.style.left = (210 - marginLeft) + "px";
-
+		element.style.top = (80 - marginTop) + "px";
+		element.style.left = (210 - marginLeft) + "px";
 		
 	}, 100);
 

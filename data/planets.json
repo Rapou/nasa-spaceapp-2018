@@ -6,6 +6,10 @@
 	"landmass": 0.0553,
 	"diameter": 4879,
 	"sizeRatio":1,
+	"distanceFromEarth":{
+		"min": 0.5,
+		"max": 1.5
+	},
 	"notes": ["C2", "B2", "F2"],
 	"colors": ["#8060be", "#414E84", "#AA987A"]
 }, {
@@ -16,7 +20,11 @@
 	"landmass": 0.8150,
 	"diameter": 12104,
 	"sizeRatio":3,
-	"notes": ["F2", "G2", "F2"],
+	"distanceFromEarth":{
+		"min": 0.25,
+		"max": 1.75
+	},
+	"notes": ["F2", "G2", "E2"],
 	"colors": ["#A16434", "#864A23", "#E9C170"]
 }, {
 	"name": "Mars",
@@ -26,6 +34,10 @@
 	"landmass": 0.1074,
 	"diameter": 6779,
 	"sizeRatio":2,
+	"distanceFromEarth":{
+		"min": 0.35,
+		"max": 2.85
+	},
 	"notes": ["E2", "D2", "F2"],
 	"colors": ["#c34d22", "#443527", "#E9C170"]
 }, {
@@ -36,6 +48,10 @@
 	"landmass": 317.8330,
 	"diameter": 139822,
 	"sizeRatio":7,
+	"distanceFromEarth":{
+		"min": 4,
+		"max": 6.5
+	},
 	"notes": ["D0", "C0", "B0"],
 	"colors": ["#E0B699", "#5D544D", "#C29A7F"]
 }, {
@@ -46,6 +62,10 @@
 	"landmass": 95.1520,
 	"diameter": 116464,
 	"sizeRatio":6,
+	"distanceFromEarth":{
+		"min": 8,
+		"max": 11
+	},
 	"notes": ["G0", "F0", "C0"],
 	"colors": ["#AB9B78", "#D8BA81", "#BEA374"]
 }, {
@@ -56,6 +76,10 @@
 	"landmass": 14.5360,
 	"diameter": 50724,
 	"sizeRatio":5,
+	"distanceFromEarth":{
+		"min": 17,
+		"max": 21
+	},
 	"notes": ["A1", "B1", "F1"],
 	"colors": ["#3FA0C9", "#235574", "#73C7E5"]
 }, {
@@ -66,6 +90,10 @@
 	"landmass": 17.1470,
 	"diameter": 49244,
 	"sizeRatio":4,
+	"distanceFromEarth":{
+		"min": 29,
+		"max": 32
+	},
 	"notes": ["B1", "C1", "A1"],
 	"colors": ["#007bed", "#4F6AAD", "#405A9F"]
 }]

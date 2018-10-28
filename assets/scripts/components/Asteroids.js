@@ -1,6 +1,6 @@
 function Asteroids(asteroidsData, rootElement){
 
-	var today = new Date();
+	var today = new Date(),
 		data = asteroidsData.near_earth_objects[today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate()],
 		view = document.createElement("DIV"),
 		move = "up", frequencyMax = 4000,
@@ -43,11 +43,13 @@ function Asteroids(asteroidsData, rootElement){
 				setTimeout(function(){
 					view.classList.remove("move");
 					view.classList.remove("position-" + randPosition);
+					
 					if((activeAsteroid + 1) == data.length){
 						activeAsteroid = 0;
 					}else{
 						activeAsteroid += 1;
 					}
+
 					randomAsteroid();
 				}, 800);
 			}, randTime);

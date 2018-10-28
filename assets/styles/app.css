@@ -1,3 +1,24 @@
+/*
+ *	Animations
+ */
+ @-webkit-keyframes sunrise {
+     0% {top: auto; bottom: -200px; left: -200px; width: 120px; height: 120px;}
+     25% {top: auto; bottom: 0px; left: 0px; width: 240px; height: 240px;}
+     50% {top: auto; bottom: 25%; left: 100px; width: 480px; height: 480px;}
+     70% {top: auto; bottom: 75%; left: 150px; width: 960px; height: 960px;}
+     90% {top: auto; bottom: 125%; left: 0px; width: 1440px; height: 1440px;}
+    100% {top: auto; bottom: 125%; left: 0px; width: 1440px; height: 1440px;}
+}
+
+@keyframes sunrise {
+      0% {top: auto; bottom: -200px; left: -200px; width: 120px; height: 120px;}
+     25% {top: auto; bottom: 0px; left: 0px; width: 240px; height: 240px;}
+     50% {top: auto; bottom: 25%; left: 100px; width: 480px; height: 480px;}
+     70% {top: auto; bottom: 75%; left: 150px; width: 960px; height: 960px;}
+     90% {top: auto; bottom: 125%; left: 0px; width: 1440px; height: 1440px;}
+    100% {top: auto; bottom: 125%; left: 0px; width: 1440px; height: 1440px;}
+}
+
 body{
 	display:block;
 	position:absolute;
@@ -7,8 +28,249 @@ body{
 	left:0;
 	margin:0;
 	padding:0;
-	font-family:'Helvetica', sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
+/*
+ *	Introduction section
+ */
+
+.intro{
+	display:flex;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:3;
+	align-items:center;
+	justify-content:center;
+	min-width:780px;
+	opacity:0;
+	visibility:hidden;
+	transition:.3s;
+	overflow:auto;
+}
+
+.intro .container{
+	display:block;
+	position:relative;
+	width:740px;
+	height:auto;
+	margin:auto;
+	padding:48px 20px;
+}
+
+.intro header{
+	display:block;
+	position:relative;
+	width:640px;
+	height:112px;
+	padding: 0;
+}
+
+.intro header .logo{
+	display:block;
+	position:relative;
+	width:320px;
+	height:100%;
+	float:left;
+}
+
+.intro header .logo img{
+	display:block;
+	position:relative;
+	width:auto;
+	height:100%;
+}
+
+.intro header .team{
+	display:block;
+	position:relative;
+	width:calc(100% - 320px);
+	height:100%;
+	float:right;
+}
+
+.intro header .team p{
+	display:block;
+	position:relative;
+	margin:0;
+	padding:0;
+	font-size:10px;
+	color:white;
+}
+
+.intro header .team p span{
+	display: block;
+	position:relative;
+
+}
+
+.intro header .team p span:first-child{
+	width:110px;
+	float:left;
+}
+
+.intro header .team p span:last-child{
+	width:calc(100% - 110px);
+	float:right;
+}
+
+.intro header:after{
+	content:"";
+	display:block;
+	float:none;
+	clear:both;
+}
+
+.intro h1{
+	display:block;
+	position:relative;
+	width:640px;
+	height:auto;
+	padding:20px 0 20px 0;
+	margin:0;
+	text-transform:uppercase;
+	font-size:28px;
+	color:white;
+	font-weight:normal;
+}
+
+.intro .presentation{
+	display:block;
+	position:relative;
+	width:660px;
+	height:auto;
+}
+
+.intro .presentation:after{
+	content:"";
+	display:block;
+	float:none;
+	clear:both;
+}
+
+.intro .presentation article{
+	display:block;
+	position:relative;
+	width: 320px;
+	height:410px;
+	float:left;
+	padding-right:30px;
+	box-sizing: border-box;
+}
+
+.intro .presentation article p{
+	color:white;
+	font-size:14px;
+	line-height:18px;
+	padding:0 0 10px 0;
+	margin:0;
+	text-align:justify;
+}
+
+.intro .presentation article p:last-child{
+	padding:0;
+}
+
+.intro .cta{
+	display:flex;
+	position:relative;
+	width:610px;
+	height:66px;
+	padding:24px 0 0 0;
+	box-sizing: border-box;
+	float:none;
+	clear:both;
+	justify-content:center;
+	align-items:center;
+
+}
+
+.intro .cta .copyright{
+	display:block;
+	position:absolute;
+	width:auto;
+	height:auto;
+	top:24px;
+	right:0;
+	margin:0;
+	padding:0;
+	font-size:10px;
+	color:white;
+}
+
+.intro .cta .button{
+	display:flex;
+	position:relative;
+	width:auto;
+	height:100%;
+	border:solid 1px white;
+	font-size:24px;
+	text-transform: uppercase;
+	box-sizing:border-box;
+	align-items:center;
+	justify-content:center;
+	font-weight:bold;
+	color:white;
+	padding:8px 20px;
+}
+
+.intro .cta .button:hover{
+	cursor:pointer;
+}
+
+.intro .partners{
+	display:flex;
+	position:absolute;
+	width:90px;
+	height:calc(100% - 141px);
+	top:62px;
+	right:20px;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:flex-start;
+}
+
+.intro .partners .partner{
+	display:block;
+	position:relative;
+	height:auto;
+}
+
+.intro .partners .partner.inck{
+	width:64px;
+}
+
+.intro .partners .partner.nasa{
+	width:50px;
+}
+
+.intro .partners .partner.spaceapp{
+	width:42px;
+}
+
+.intro .partners .partner.impacthub{
+	width:94px;
+}
+
+.intro .partners .partner img{
+	display:block;
+	position:relative;
+	width:100%;
+	height:auto;
+}
+
+.loading .intro{
+	opacity:1;
+	visibility:visible;
+}
+
+
+/*
+ * Background & sun
+ */
 
 .background{
 	display:block;
@@ -17,23 +279,54 @@ body{
 	height:100%;
 	top:0;
 	left:0;
-	background: #2d398b; 
+	margin:0;
+	padding:0;
+	background: #0d3d91; 
 	z-index:1;
+	overflow:hidden;
 }
 
 .sun{
 	display:block;
-	position:absolute;
-	width:180px;
-	height:180px;
+	position:fixed;
+	width:120px;
+	height:120px;
+	top:120px;
+	left:calc(50% - 60px);
 	background:#ffa600;
+	box-sizing:border-box;
 	border-radius:50%;
-	top:80px;
-	left:210px;
-	transition:.2s;
+	-webkit-animation: sunrise 240s infinite linear;
+	animation: sunrise 240s infinite linear; 
+	opacity:0;
+	visibility:hidden;
+	z-index:2;
 }
 
-header{
+.running .sun{
+	opacity:1;
+	visibility:visible;
+}
+
+/*
+ * Tool section
+ */
+
+.tool{
+	display:block;
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	opacity:0;
+	visibility: hidden;
+	transition:.3s;
+	overflow:auto;
+	z-index:3;
+}
+
+.tool header{
 	display:block;
 	position:relative;
 	z-index:2;	
@@ -44,25 +337,35 @@ header{
 	margin:auto;
 }
 
-header .logo{
+.tool header .logo{
 	display:block;
 	position:relative;
 	width:210px;
 	height:120px;	
 }
 
-header .logo svg{
+.tool header .logo svg, header .logo img{
 	display:block;
 	position:relative;
 	width:100%;
 	height:auto;
 }
 
+.running .tool{
+	opacity:1;
+	visibility:visible;
+	transition:.3s;
+}
+
+/*
+ * app
+ */
+
 .app{
 	display:block;
 	position:relative;
 	width:100%;
-	min-width:560px;
+	min-width:800px;
 	height:auto;
 	margin:auto;
 	box-sizing:border-box;
@@ -92,6 +395,10 @@ header .logo svg{
     left: 168px;
 }
 
+
+/*
+ * Planet
+ */
 .planet{
 	display:block;
 	position:relative;
@@ -149,6 +456,21 @@ header .logo svg{
 	background:#eeeeee;
 }
 
+.planet.play{
+	opacity:1;
+}
+
+.planet.play .planet__title{
+	opacity:1;
+}
+
+.planet:hover{
+	cursor:pointer;
+}
+
+/*
+ * Visual
+ */
 
 .visual-wrapper{
 	display:flex;
@@ -203,22 +525,9 @@ header .logo svg{
 	height:64px;
 }
 
-.planet.play{
-	opacity:1;
-}
-
-.planet.play .planet__title{
-	opacity:1;
-}
-
-.planet:hover{
-	cursor:pointer;
-}
-
-
-body{
-  background:black;
-}
+/*
+ * Asteroids
+ */
 
 .asteroids{
 	position:fixed;
@@ -242,7 +551,6 @@ body{
 	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(255,255,255,0.4) 100%); 
 }
 
-
 .asteroids.move{
 	opacity:1;
   	transition: .6s;
@@ -253,7 +561,6 @@ body{
     top: -10px;
   	transform:rotate(32deg);
 }
-
 
 .asteroids.position-1.move{
     right: -150px;
@@ -278,7 +585,6 @@ body{
   	transform:rotate(32deg);
 }
 
-
 .asteroids.position-3.move{
     right: -150px;
     top: 300px;
@@ -289,7 +595,6 @@ body{
     top: -10px;
   	transform:rotate(32deg);
 }
-
 
 .asteroids.position-4.move{
     right: -150px;
@@ -306,5 +611,3 @@ body{
     right: -150px;
     top: 250px;
 }
-
-@
